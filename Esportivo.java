@@ -12,7 +12,8 @@ public class Esportivo extends Movel{
     public int getNumPassageiros() {return numPassageiros;}
 
     public void setCilindradas(int cilindradas) {
-        if (cilindradas != 0) {
+        String tempS = cilindradas + "";
+        if (tempS != null & cilindradas != 0) {
             if (cilindradas>0) {
                 this.cilindradas = cilindradas;
             }else System.out.println("inválido!");
@@ -28,7 +29,7 @@ public class Esportivo extends Movel{
     @Override
     public String toString() {
         
-        return super.toString() + " [cilindradas: "+ cilindradas +", num. passageiros: " + numPassageiros+ "]";
+        return "Esportivo - " + super.toString() + " [cilindradas: "+ cilindradas +", num. passageiros: " + numPassageiros+ "]";
     }
 
 }

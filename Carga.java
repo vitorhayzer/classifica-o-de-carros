@@ -12,7 +12,8 @@ public class Carga extends Movel{
     public int getVolumeMaximo() { return volumeMaximo;}
 
     public void setPesomaximo(int pesomaximo) {
-        if (pesomaximo != 0) {
+        String tempS = pesomaximo + "";
+        if (tempS != null & pesomaximo != 0) {
             if (pesomaximo>0) {
                 this.pesomaximo = pesomaximo;
             }else System.out.println("inválido!");
@@ -20,7 +21,8 @@ public class Carga extends Movel{
     }
 
     public void setVolumeMaximo(int volumeMaximo) {
-        if (volumeMaximo != 0) {
+        String tempS = volumeMaximo + "";
+        if (tempS != null & volumeMaximo != 0) {
             if (volumeMaximo>0) {
                 this.volumeMaximo = volumeMaximo;
             }else System.out.println("inválido!");
@@ -30,7 +32,7 @@ public class Carga extends Movel{
     @Override
     public String toString() {
         
-        return super.toString() + " [volume max: "+ volumeMaximo+ ", peso max"+ pesomaximo+ "]";
+        return "Carga - " + super.toString() + " [volume max: "+ volumeMaximo+ ", peso max"+ pesomaximo+ "]";
     }
 
 }

@@ -1,9 +1,4 @@
 public class Main {
-
-    // os sets que estao sem a comparaçao com null é pq o java reclamou,
-    // n sei pq, n sei nem se ta certo, caso ele reclame dos outros por favor retire-os.
-    //pelo aq cmg nao reclamou dos que sobraram.
-
     public static void main(String[] args) {
         
         Movel motoca = new Movel();

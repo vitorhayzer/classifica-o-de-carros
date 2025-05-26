@@ -21,7 +21,9 @@ public class Movel{
 
     public int getNumeroRodas() {return numeroRodas;}
     public void setNumeroRodas(int numeroRodas) {
-        if (numeroRodas != (Integer)null & numeroRodas != 0) {
+        
+        String tempS = numeroRodas + "";
+        if (tempS != null  & numeroRodas != 0) {
             if (numeroRodas>0) {
                 this.numeroRodas = numeroRodas;
             }else System.out.println("num. rodas inválido!");
@@ -30,7 +32,8 @@ public class Movel{
 
     public int getAnoFabricaçao() {return anoFabricaçao;}
     public void setAnoFabricaçao(int anoFabricaçao) {
-        if (anoFabricaçao != (Integer)null & anoFabricaçao != 0) {
+        String tempS = anoFabricaçao + "";
+        if (tempS != null & anoFabricaçao != 0) {
             if (anoFabricaçao>0) {
                 this.anoFabricaçao = anoFabricaçao;
             }else System.out.println("ano inválido!");
@@ -39,7 +42,8 @@ public class Movel{
 
     public int getVelocidade() {return velocidade;}
     public void setVelocidade(int velocidade) {
-        if (velocidade != 0) {
+        String tempS = velocidade + "";
+        if (tempS != null & velocidade != 0) {
             if (velocidade>0) {
                 this.velocidade = velocidade;
             }else System.out.println("velocidade inválida!");
@@ -49,7 +53,7 @@ public class Movel{
     @Override
     public String toString() {
         
-        return "[" +"num. rodas: "+ numeroRodas +", fabricante: "+ fabricante +", ano fabricaçao: "+
+        return "[num. rodas: "+ numeroRodas +", fabricante: "+ fabricante +", ano fabricaçao: "+
         anoFabricaçao +", velocidade: "+ getVelocidade() +"]";
     }
 
